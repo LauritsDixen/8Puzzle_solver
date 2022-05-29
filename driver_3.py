@@ -1,3 +1,5 @@
+import time
+
 class Board(object):
     # Board class
     
@@ -143,6 +145,7 @@ def runSolver(solverType, startState):
     solver = solverType(startState)
     
     # Main loop (checks if frontier is empty)
+    beginning_time = time.time()
     while len(solver.getFrontier()) != 0:
             
         # Gets new state from queue
